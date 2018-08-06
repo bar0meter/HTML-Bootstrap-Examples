@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Registration Form</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+  </head>
+  <body>
+    <div class="container" style="padding-top: 50px">
+      <div class="card mx-auto" style="max-width: 500px">
+        <div class="card-header text-center">
+          <h2>Registration Form</h2>
+        </div>
+        <form style="padding: 20px" method="post">
+          <div class="row">
+            <div class="col-md-6 form-group input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text"><i class="fa fa-user"></i></span>
+              </div>
+              <input type="text" name="firstname" value="" class="form-control" placeholder="First Name" required autofocus>
+            </div>
+            <div class="col-md-6 form-group form-group input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text"><i class="fa fa-user"></i></span>
+              </div>
+              <input type="text" name="lastname" value="" class="form-control" placeholder="Last Name">
+            </div>
+            <div class="col-md-6 form-group input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+              </div>
+              <input type="date" name="city" value="" placeholder="Date of Birth" class="form-control" required>
+            </div>
+            <div class="col-md-6 form-group input group">
+              <select class="form-control" name="gender">
+                <option value="default" default></option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="col-md-12 form-group input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text">@</span>
+              </div>
+              <input type="text" name="email" value="" placeholder="Username" class="form-control" required>
+            </div>
+            <div class="col-md-12 form-group input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text"><i class="fa fa-envelope"></i></span>
+              </div>
+              <input type="email" name="email" value="" placeholder="john@doe.com" class="form-control" required>
+            </div>
+            <div class="col-md-12 form-group input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text"><i class="fa fa-key"></i></span>
+              </div>
+              <input type="password" name="password" value="" placeholder="Password" class="form-control" required>
+            </div>
+            <div class="col-md-12 form-group input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text"><i class="fa fa-key"></i></span>
+              </div>
+              <input type="password" name="retype_password" value="" placeholder="Retype Password" class="form-control" required>
+            </div>
+            <div class="col-md-6 form-group">
+              <input type="text" name="city" value="" placeholder="City" class="form-control">
+            </div>
+            <div class="col-md-6 form-group">
+              <input type="text" name="pincode" value="" placeholder="Zip Code" class="form-control">
+            </div>
+            <div class="col-md-6 form-group">
+              <input type="text" name="state" value="" placeholder="State" class="form-control">
+            </div>
+            <div class="col-md-6 form-group">
+              <input type="text" name="country" value="" placeholder="Country" class="form-control">
+            </div>
+            <div class="col-md-12 form-group">
+              <input type="file" name="resume" value="" placeholder="Resume" class="form-control-file" required>
+            </div>
+            <div class="col-md-12 form-check form-group">
+                <input type="checkbox" name="agree" value="agree" class="" required>
+                <label class="form-check-label">Terms and Conditions</label>
+            </div>
+            <div class="col-md-12 text-center">
+              <input type="submit" name="" value="Submit" class="btn btn-primary">
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
+  </body>
+</html>
