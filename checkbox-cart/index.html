@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Check Box Cart</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+	<script type="text/javascript" src="cart.js"></script>
+</head>
+<body>
+	<div class="container-fluid padding">
+		<div class="row card">
+			<div class="col-12">
+				<h2 class="card-header text-center">Option Selector</h2>
+			</div>
+		</div>
+		<div class="card-body">
+			<div class="col-12">
+				<form class="form-group">
+					<table id="tableCart" class="table table-striped text-center">
+						<thead>
+							<tr>
+								<th>Selection</th>
+								<th>Item Name</th>
+								<th>Item Price</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<input type="checkbox" name="checkbox1" id="checkbox1" onchange="update_cart(this)">
+								</td>
+								<td>Eclairs</td>
+								<td id="item1">$1000.89</td>
+							</tr>
+							<tr>
+								<td>
+									<input type="checkbox" name="checkbox2" id="checkbox2" onchange="update_cart(this)">
+								</td>
+								<td>Tide</td>
+								<td id="item2">$89.00</td>
+							</tr>
+							<tr>
+								<td>
+									<input type="checkbox" name="checkbox3" id="checkbox3" onchange="update_cart(this)">
+								</td>
+								<td>Cello Pens</td>
+								<td id="item3">$7.99</td>
+							</tr>
+							<tr>
+								<td>
+									<input type="checkbox" name="checkbox4" id="checkbox4" onchange="update_cart(this)">
+								</td>
+								<td>Tennis Ball</td>
+								<td id="item4">$6.65</td>
+							</tr>
+						</tbody>
+					</table>
+				</form>
+			</div>
+		</div>
+		<div class="card-footer">
+			<div class="col-12">
+				<p>Total : <span id="totalPrice">$0</span></p>
+		</div>
+	</div>
+	<div class="text-center mt-4">
+		<button type="button" class="btn btn-primary">Proceed to Pay</button>
+	</div>
+</body>
+</html>
