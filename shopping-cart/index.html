@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Shopping Cart using Bootstrap 4 + Javascript</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css">
+    <script type="text/javascript" src="cart.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <style media="screen">
+
+    </style>
+  </head>
+  <body>
+    <div class="container" style="padding-top: 50px">
+      <div class="card mx-auto" style="max-width: 1000px">
+        <div class="card-header bg-dark text-light" >
+            <i class="fa fa-shopping-cart mt-2 mr-2"></i>
+            <span>Shipping Cart</span>
+          <a href="#" class="btn btn-outline-info float-right">Continue shopping</a>
+        </div>
+        <div class="card-body">
+          <table class="table text-center">
+            <thead>
+              <tr>
+                <th>Item</th>
+                <th>Item Price</th>
+                <th>Quantity</th>
+                <th>Total</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div class="row">
+                    <div class="col-6">
+                      <img src="" alt="Item 1">
+                    </div>
+                    <div class="col-6">
+                      <p>Item Description</p>
+                    </div>
+                  </div>
+                </td>
+                <td name="item1_price">$45.00</td>
+                <td>
+                  <div class="row">
+                    <div class="col-6">
+                      <input type="number" name="item1" value="0" min="0" class="form-control" style="width: 60px" oninput="update_total(this)">
+                    </div>
+                    <div class="col-6">
+                      <button type="button" name="remove_item1" class="btn btn-outline-danger" onclick="reset_cart(this)"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                    </div>
+                  </div>
+                </td>
+                <td style="max-width: 60px">$<span id="item1_total">0.00</span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="row">
+                    <div class="col-6">
+                      <img src="" alt="Item 2">
+                    </div>
+                    <div class="col-6">
+                      <p>Item Description</p>
+                    </div>
+                  </div>
+                </td>
+                <td name="item2_price">$14.86</td>
+                <td>
+                  <div class="row">
+                    <div class="col-6">
+                      <input type="number" name="item2" value="0" min="0" class="form-control" style="width: 60px" oninput="update_total(this)">
+                    </div>
+                    <div class="col-6">
+                      <button type="button" name="remove_item2" class="btn btn-outline-danger" onclick="reset_cart(this)"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                    </div>
+                  </div>
+                </td>
+                <td style="max-width: 60px">$<span id="item2_total" >0.00</span></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td>
+                  <div class="row">
+                    <div class="col-6"></div>
+                    <div class="col-6 small" style="color: green">
+                      <p>Subtotal</p>
+                      <p>Tax (5%)</p>
+                      <p>Shipping</p>
+                    </div>
+                  </div>
+                </td>
+                <td style="max-width: 60px">
+                  <div class="small">
+                    <p>$<span id="subtotal">0.00</span></p>
+                    <p>$<span id="tax">0.00</span></p>
+                    <p>$<span id="shipping">0.00</span></p>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="card-footer">
+          <div class="row mt-3">
+            <div class="col-6">
+              <form class="form-inline form-group">
+                <input type="text" name="coupon_code" placeholder="Enter Coupon Code" class="form-control mr-3">
+                <button type="button" name="coupon_apply" class="btn btn-info">Apply</button>
+              </form>
+            </div>
+            <div class="col-6 text-right">
+              <div class="row">
+                <div class="col-9">
+                  <p><b>Grand Total</b></p>
+                </div>
+                <div class="col-3 text-center" style="padding-right: 33px">
+                  <b style="color: red">$<span id="grand_total">0.00</span></b>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center">
+        <button type="button" name="payment" class="btn btn-primary mt-4">Proceed to Pay</button>
+      </div>
+    </div>
+  </body>
+</html>
