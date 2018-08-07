@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Todo App</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+  <style media="screen">
+    .App {
+      padding: 20px
+    }
+
+    table {
+      max-width: 600px
+    }
+
+    th,
+    td {
+      width: 70px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container App mx-auto">
+    <div class="text-center m-5">
+      <h1>TODO APP</h1>
+    </div>
+    <form class="form form-inline justify-content-center" action="index.html" method="post" id="todoApp">
+      <div class="form-group mx-2">
+        <input type="text" name="todo" value="" placeholder="Title..." id="title" class="form-control" autofocus>
+      </div>
+      <div class="form-group mx-2">
+        <select class="form-control" name="category" id="category">
+          <option value="" default disabled selected hidden></option>
+          <option value="1">Learning</option>
+          <option value="2">Shopping</option>
+          <option value="3">Playing</option>
+        </select>
+      </div>
+      <button type="button" name="button" id="add_list" class="btn btn-primary mx-2">Add to List</button>
+      <button type="reset" name="button" class="btn btn-danger mx-2">Reset</button>
+    </form>
+    <div class="mt-4 mx-2">
+      <table class="table table-bordered" id="table_list" style="">
+        <tr>
+          <th>ID</th>
+          <th>Title</th>
+          <th>Category</th>
+          <th>Completion Status</th>
+          <th></th>
+        </tr>
+      </table>
+      <div class="text-center mt-5">
+        <button type="button" class="btn btn-success m-2" id="update_list">Update List</button>
+        <button type="button" class="btn btn-success m-2" id="clear_list">Clear List</button>
+      </div>
+    </div>
+  </div>
+
+</body>
+<script src="app.js" charset="utf-8"></script>
+
+</html>
